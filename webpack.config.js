@@ -17,7 +17,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.js",
+        filename: "[name].js",
         assetModuleFilename: 'images/[name][ext]',
     },
      
@@ -35,10 +35,10 @@ module.exports = {
             "sass-loader"
           ]
       },
-      {
-        test: /\.html$/i,
-        use: 'html-loader'
-      },
+      // {
+      //   test: /\.html$/i,
+      //   use: 'html-loader'
+      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource"
@@ -63,7 +63,10 @@ module.exports = {
           patterns: [
             {
               from: path.resolve(__dirname, 'src/assets/images/'),
-              to: path.resolve(__dirname, 'dist/images-min')
+              to: path.resolve(__dirname, 'dist/images-min/'),
+              // globOptions: {
+              //   ignore: ["**/default.hbs"]
+              // }
             }
           ]
         }),
