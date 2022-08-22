@@ -1,0 +1,16 @@
+.footer{
+    padding-left: 355px;
+    padding-right: 355px;
+    text-align: center;
+
+    &__logo{
+        display: inline-block;
+        line-height: 0;
+    }
+
+    &__desc{
+        font-size: 14px;
+        line-height: 1.71;
+        color: $text-secondary;
+    }
+}

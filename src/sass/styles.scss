@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@import './base/reset';
+@import './abstracts/fonts';
+@import './abstracts/variables';
+@import './base/typography';
+@import './base/helpers';
+@import './abstracts/animations';
+@import './abstracts/mixins';
+@import './components/anchors';
+@import './components/buttons';
+@import './components/icons';
+@import './layouts/container';
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/properties';
+@import './layouts/contact';
+@import './layouts/sale';
+@import './layouts/clients';
+@import './layouts/footer';
+@import './layouts/responsive';

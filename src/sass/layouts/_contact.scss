@@ -1,0 +1,29 @@
+.contact{
+    padding: 60px 0 100px;
+    display: flex;
+
+    &__info{
+        width: calc(50% - 15px);
+
+        &:first-child{
+
+            .heading_lg{
+                color: $primary-color;
+            }
+
+            p, .ph-num{
+                font-size: 18px;
+                color: $text-secondary;
+            }
+
+            .ph-num{
+                display: inline-block;
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            
+        }
+    }
+}

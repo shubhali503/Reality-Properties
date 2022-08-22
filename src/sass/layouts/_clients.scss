@@ -1,0 +1,59 @@
+.clients-section{
+    @include flexCenter(center, center);
+
+    .btn-prev, .btn-next{
+        background-color: transparent;
+        color: $primary-color;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .clients{
+        padding: 97px 0 150px;
+    
+        .heading_md{
+            text-align: center;
+            margin-bottom: 81px;
+        }
+    
+        &__slider{
+            @include flexCenter(center, center);
+    
+            &-card{
+                text-align: center;
+                border-radius: 5px;
+                background-color: $bg-light;
+    
+                figure{
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 30px;
+                    }
+    
+                    figcaption{
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: $text-secondary;
+                    }
+                }
+    
+                p{
+                    line-height: 1.69;
+                    color: $text-secondary;
+                }
+    
+                &.active{
+                    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+                    border: 1px solid $border-light2;
+                    background-color: white;
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}

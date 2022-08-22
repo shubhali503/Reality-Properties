@@ -1,0 +1,27 @@
+@keyframes pulse-grow {
+	to {
+		transform: scale(1.07);
+	}
+}
+
+@keyframes fade-in-down{
+    0%{
+        top: -500px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left{
+    0%{
+        left: -500px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}

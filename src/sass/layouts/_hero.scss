@@ -1,0 +1,145 @@
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    background-image: -webkit-image-set(
+        url("../assets/images/background.jpg") 1x,
+        url("../assets/images/background@2x.jpg") 2x,
+        url("../assets/images/background@3x.jpg") 3x);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__caption{
+            font-weight: bold;
+            color: white;
+
+            h1{
+                position: relative;
+                top: -500px;
+                opacity: 0;
+                animation: fade-in-down;
+                animation-duration: 1.5s;
+                animation-fill-mode: forwards;
+            }
+
+            h5{
+                font-size: 18px;
+                position: relative;
+                left: -500px;
+                opacity: 0;
+                animation: fade-in-left;
+                animation-duration: 1.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &__search{
+            background-color: white;
+            width: 60%;
+            border-radius: 10px;
+
+            // &-select{
+            //     display: inline-block;
+            //     // width: 22%;
+            //     max-width: 150px;
+            //     width: 100%;
+            //     font-size: 14px;
+            //     line-height: 3.57;
+            //     color: $text-secondary;
+            //     box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+
+            //     select{
+            //         font-family: inherit;
+            //         width: 100%;
+            //         outline: none;
+            //         cursor: pointer;
+            //     }
+            // }
+
+            &-select{
+                display: inline-block;
+                max-width: 150px;
+                width: 100%;
+                box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+                position: relative;
+                
+                .select-btn{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                    line-height: 3.57;
+                    color: $text-secondary;
+                    cursor: pointer;
+
+                    i{
+                        transition: 0.3s;
+                    }
+                }
+
+                .options{
+                    background-color: $bg-light;
+                    font-size: 14px;
+                    max-width: 145px;
+                    width: 100%;
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 5px;
+                    height: 0px;
+                    overflow-y: hidden;
+                    text-align: center;
+                    cursor: pointer;
+                    @include transition-ease;
+
+                    .option{
+                        margin: 5px 0;
+                        padding: 6px 0;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover{
+                            background-color: lighten($primary-color, 25%);
+                            color: white;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                &.active{
+
+                    .select-btn i{
+                        transform: rotate(180deg);
+                    }
+
+                    .options{
+                        display: block;
+                        height: fit-content;
+                        overflow-y: auto;
+                    }
+                }
+            }
+
+            &-input{
+                display: inline-block;
+                // width: 72%;
+                width: calc(100% - 155px);
+
+                span{
+                    color: $icon-color;
+                }
+
+                input{
+                    font-family: inherit;
+                    outline: none;
+                    width: calc(100% - 16px - 37px);
+                }
+            }
+        }
+    }
+}
