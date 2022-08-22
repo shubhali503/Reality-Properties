@@ -4,8 +4,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 var InjectHtmlPlugin = require('inject-html-webpack-plugin');
-
-
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -59,6 +59,19 @@ module.exports = {
         new SpriteLoaderPlugin({
             plainSprite: true
         }),
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, 'src/assets/images/'),
+              to: path.resolve(__dirname, 'dist/images-min')
+            }
+          ]
+        }),
+        new ImageminPlugin({
+          pngquant: ({
+            quality: '95-100'
+          })
+        })
     ],
 
     devServer: {
