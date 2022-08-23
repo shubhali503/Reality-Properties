@@ -33,6 +33,33 @@
         }
     }
 
+    .clients-section{
+
+        .clients{
+
+            &__slider{
+
+                &-card{
+
+                    figure{
+                        img{
+
+                        }
+
+                        figcaption{
+
+                        }
+                    }
+
+                    p{
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
     .footer{
         padding-left: 80px;
         padding-right: 80px;
@@ -191,6 +218,37 @@
         }
     }
 
+    .clients-section{
+
+        .clients{
+
+            &__slider{
+
+                &-card{
+                    // padding: 20px;
+
+                    figure{
+                        img{
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 20px;
+                            margin-bottom: 20px;
+                        }
+
+                        figcaption{
+                            font-size: 18px;
+                        }
+                    }
+
+                    p{
+                        font-size: 14px;
+                        line-height: 1.35;
+                    }
+                }
+            }
+        }
+    }
+
     .footer{
         padding-left: 40px;
         padding-right: 40px;
@@ -300,6 +358,29 @@
     }
 
     .clients-section{
-        display: none;
+
+        .clients{
+
+            &__slider{
+
+                &-card{
+
+                    figure{
+                        img{
+
+                        }
+
+                        figcaption{
+
+                        }
+                    }
+
+                    p{
+                        
+                    }
+                }
+            }
+        }
     }
+
 }
