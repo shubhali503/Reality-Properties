@@ -67,10 +67,14 @@ options.forEach(option =>{
     })
 })
 
+// ------------------------ Slick Slider ------------------------------
+
+
 $(document).ready(function(){
   $('.clients__slider').slick({
     centerMode: true,
-    // centerPadding: '60px',
+    // adaptiveHeight: true,
+    centerPadding: '60px',
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 300,
@@ -84,7 +88,7 @@ $(document).ready(function(){
         settings: {
           arrows: true,
           centerMode: true,
-          // centerPadding: '40px',
+          centerPadding: '40px',
           slidesToShow: 3,
           slidesToScroll: 1
         }
@@ -94,7 +98,7 @@ $(document).ready(function(){
         settings: {
           arrows: true,
           centerMode: true,
-          // centerPadding: '40px',
+          centerPadding: '40px',
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -104,7 +108,7 @@ $(document).ready(function(){
         settings: {
           arrows: true,
           centerMode: true,
-          // centerPadding: '40px',
+          centerPadding: '40px',
           slidesToShow: 1,
           slidesToScroll: 1
         }

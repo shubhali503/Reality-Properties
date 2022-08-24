@@ -7,7 +7,7 @@
 
     .clients{
         padding: 97px 0 150px;
-        // position: relative;
+        position: relative;
     
         .heading_md{
             text-align: center;
@@ -18,7 +18,11 @@
             width: 100%;
             
             .slick-slider{
-                user-select: none;
+                // max-height: fit-content;
+            }
+
+            .slick-track{
+                height: fit-content;
             }
     
             &-card{
@@ -77,6 +81,10 @@
           
           .slick-next {
             right: -30px;
+          }
+
+          .slick-prev::before, .slick-next::before{
+            content: "";
           }
 
     }
