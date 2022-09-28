@@ -1,11 +1,4 @@
 import '../sass/styles.scss';
-// import bgImg from '../assets/images/background.jpg';
-
-// const img = document.getElementsByTagName('img');
-
-// img.src = bgImg;
-
-const spriteUrl = `${window.origin}/sprite.svg`;
 
 const myHeader = document.querySelector(".header");
 
@@ -31,7 +24,7 @@ window.onscroll = function () {
     }
 };
 
-//-------------- Responsive header ----------------------
+//---------------------- Responsive header ----------------------
 
 let showMenu = false;
 
@@ -58,7 +51,7 @@ function toggleMenu() {
 
 selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));       
 
-options.forEach(option =>{
+options.forEach(option => {
     option.addEventListener("click", ()=>{
         let selectedOption = option.querySelector(".option-text").innerText;
         sBtn_text.innerText = selectedOption;
@@ -70,49 +63,95 @@ options.forEach(option =>{
 // ------------------------ Slick Slider ------------------------------
 
 
-$(document).ready(function(){
-  $('.clients__slider').slick({
-    centerMode: true,
-    // adaptiveHeight: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 300,
-    dots: false,
-    arrows: true,
-    prevArrow:'<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
-    nextArrow:'<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+// $(document).ready(function(){
+//   $('.clients__slider').slick({
+//     centerMode: true,
+//     variableWidth: true,
+//     centerPadding: '60px',
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     speed: 300,
+//     dots: false,
+//     arrows: true,
+//     prevArrow:'<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+//     nextArrow:'<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+//     responsive: [
+//       {
+//         breakpoint: 1400,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 3,
+//           slidesToScroll: 1
+//         }
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       }
+//     ]
+//   });
+// });
+
+
+$('.clients__slider').slick({
+  centerMode: true,
+  variableWidth: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 300,
+  dots: false,
+  arrows: true,
+  prevArrow:'<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+  nextArrow:'<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3,
+        slidesToScroll: 1
       }
-    ]
-  });
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });

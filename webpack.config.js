@@ -3,7 +3,6 @@ const miniCss = require('mini-css-extract-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-var InjectHtmlPlugin = require('inject-html-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -81,11 +80,11 @@ module.exports = {
             }
           ]
         }),
-        new ImageminPlugin({
-          pngquant: ({
-            quality: '95-100'
-          })
-        })
+        // new ImageminPlugin({
+        //   pngquant: ({
+        //     quality: '95-100'
+        //   })
+        // })
     ],
 
     devServer: {

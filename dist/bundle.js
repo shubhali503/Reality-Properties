@@ -61,11 +61,7 @@ var __webpack_exports__ = {};
   \*********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/styles.scss */ "./sass/styles.scss");
- // import bgImg from '../assets/images/background.jpg';
-// const img = document.getElementsByTagName('img');
-// img.src = bgImg;
 
-var spriteUrl = "".concat(window.origin, "/sprite.svg");
 var myHeader = document.querySelector(".header");
 var navBtn = document.querySelector('.nav-btn');
 var hamburger = document.querySelector('.nav-btn__burger');
@@ -86,7 +82,7 @@ window.onscroll = function () {
     myHeader.classList.add("header-transparent");
     myHeader.classList.remove("header-colored");
   }
-}; //-------------- Responsive header ----------------------
+}; //---------------------- Responsive header ----------------------
 
 
 var showMenu = false;
@@ -121,48 +117,92 @@ options.forEach(function (option) {
     optionMenu.classList.remove("active");
   });
 }); // ------------------------ Slick Slider ------------------------------
+// $(document).ready(function(){
+//   $('.clients__slider').slick({
+//     centerMode: true,
+//     variableWidth: true,
+//     centerPadding: '60px',
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     speed: 300,
+//     dots: false,
+//     arrows: true,
+//     prevArrow:'<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+//     nextArrow:'<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+//     responsive: [
+//       {
+//         breakpoint: 1400,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 3,
+//           slidesToScroll: 1
+//         }
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           arrows: true,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       }
+//     ]
+//   });
+// });
 
-$(document).ready(function () {
-  $('.clients__slider').slick({
-    centerMode: true,
-    // adaptiveHeight: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 300,
-    dots: false,
-    arrows: true,
-    prevArrow: '<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
-    nextArrow: '<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
-    responsive: [{
-      breakpoint: 1400,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
-  });
+$('.clients__slider').slick({
+  centerMode: true,
+  variableWidth: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 300,
+  dots: false,
+  arrows: true,
+  prevArrow: '<button class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+  nextArrow: '<button class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+  responsive: [{
+    breakpoint: 1400,
+    settings: {
+      arrows: true,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 3,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      arrows: true,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      arrows: true,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 });
 })();
 
